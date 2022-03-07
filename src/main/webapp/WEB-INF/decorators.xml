@@ -1,9 +1,8 @@
 <!-- decorators để định nghĩa và phân chia bố cục website theo partial view -->
 <decorators>
-    <decorator name="user" page="/WEB-INF/views/ui/layouts/user.jsp">
+    <decorator name="chosen" page="/WEB-INF/views/ui/layouts/user.jsp">
         <pattern>/*</pattern>
     </decorator>
-        
     <decorator name="admin" page="/WEB-INF/views/ai/layouts/admin.jsp">
         <pattern>/admin/*</pattern>
     </decorator>
