@@ -20,12 +20,12 @@ import org.springframework.web.servlet.ModelAndView;
  * @author nguye
  */
 @Controller
-public class AccountControler {
+public class AccountController {
     
     @RequestMapping(value = "/admin/login", method = RequestMethod.GET)
     public ModelAndView ViewLogin() {
         ModelAndView mv = new ModelAndView("ai/pages/login");
-        mv.addObject("login", new Account());
+        mv.addObject("loginform", new Account());
         return mv;
     }
     
@@ -33,15 +33,15 @@ public class AccountControler {
     public SAccount acc = new SAccount();
     
     @RequestMapping(value = "/admin/log-in", method = RequestMethod.POST)
-    public ModelAndView Dangnhapadmin(HttpServletRequest request, HttpSession session, @ModelAttribute("login") Account user) {
+    public ModelAndView Login(HttpServletRequest request, HttpSession session, @ModelAttribute("loginform") Account user) {
         ModelAndView mv = new ModelAndView();
         user = acc.checkAccount(user);
         if (user != null) {
             session.setAttribute("LoginInfo", user);
-            mv.setViewName("redirect:");
+            mv.setViewName("redirect:home");
         } else {
             mv.setViewName("ai/pages/login");
-            mv.addObject("login-status", "Đăng Nhập Thất Bại");
+            mv.addObject("status", "Thất Bại");
         }
         return mv;
     }

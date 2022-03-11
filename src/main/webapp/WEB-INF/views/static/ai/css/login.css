@@ -1,0 +1,218 @@
+.login {
+  color: var(--text-color);
+}
+
+.login .header {
+  position: relative;
+  color: var(--sub-color);
+  z-index: 1;
+}
+
+.login .line {
+  height: 1px;
+  margin-top: 3rem;
+  opacity: 0.5;
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0) 20%,
+    rgba(246, 170, 190, 1) 20%,
+    rgba(246, 170, 190, 1) 80%,
+    rgba(0, 0, 0, 0) 80%
+  );
+}
+
+.top-brand {
+  height: 90px;
+  padding: 1rem 0rem 0rem 0rem;
+  color: var(--text-menu);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+}
+
+.top-brand span {
+  display: flex;
+}
+.top-brand span:first-child {
+  font-size: 2.5rem;
+  float: left;
+}
+
+.login .card {
+  padding: 3rem;
+  border: 2px solid var(--text-trans-grey);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.card-login {
+  width: 800px;
+  height: 450px;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(30px); /* This will produce the blur */
+  box-shadow: var(--box-shadow);
+  border: 1px solid var(--text-trans-grey);
+}
+
+.login-form input[type="text"],
+.login-form input[type="button"],
+.login-form input[type="password"],
+.main-button {
+  width: 100%;
+}
+
+.welcome {
+  background: var(--sub-color);
+  background-image: var(--noise-2);
+  padding: 3rem 2rem 3rem 4rem;
+}
+
+.welcome h3 {
+  margin-bottom: 0.5rem;
+  color: var(--text-light-grey);
+}
+.welcome h1 {
+  margin-bottom: 5rem;
+}
+.welcome h4 {
+  color: var(--text-light-grey);
+}
+.welcome span {
+  margin-top: 3rem;
+  font-size: 5rem;
+}
+
+.login-form {
+  padding: 4rem;
+}
+
+.login-form h2 {
+  margin-bottom: 1rem;
+}
+
+.login-form .detail {
+  margin-bottom: 0.2rem;
+}
+
+.login-form .container {
+  color: var(--text-grey);
+}
+
+.login footer {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--text-trans-grey);
+}
+
+@media only screen and (max-width: 1440px) {
+  .card-login {
+    width: 600px;
+    height: 400px;
+  }
+  .welcome {
+    background: var(--sub-color);
+    background-image: var(--noise-2);
+  }
+  .login .card {
+    padding: 0;
+    border: 0px solid var(--text-trans-grey);
+  }
+  .login .line {
+    opacity: 0;
+  }
+  .welcome h3 {
+    display: none;
+  }
+  .welcome h1 {
+    display: none;
+  }
+  .welcome h4 {
+    display: none;
+  }
+  .welcome span {
+    margin-top: 3.5rem;
+  }
+  .login-form {
+    padding: 2rem 2rem 0rem 2rem;
+  }
+
+  .login-form h2 {
+    margin-bottom: 1rem;
+  }
+
+  
+
+  .login-form .container {
+    color: var(--text-grey);
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .login .line {
+    opacity: 0;
+  }
+}
+@media only screen and (max-width: 725px) {
+  .card-login {
+    width: 400px;
+    height: 400px;
+    grid-template-columns: auto;
+  }
+  .welcome {
+    display: none;
+  }
+  .login .card {
+    padding: 0;
+    border: 0px solid var(--text-trans-grey);
+  }
+}
+@media only screen and (max-width: 525px) {
+  .card-login {
+    width: 300px;
+    height: 400px;
+    grid-template-columns: auto;
+  }
+
+  .welcome {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .card-login {
+    width: 300px;
+    height: 400px;
+    grid-template-columns: auto;
+  }
+}
+@media only screen and (max-height: 550px) {
+  .card-login {
+    width: 300px;
+    height: 400px;
+    grid-template-columns: auto;
+  }
+  .top-brand {
+    display: none;
+  }
+  .welcome {
+    display: none;
+  }
+  .login .card {
+    padding: 0;
+    border: 0px solid var(--text-trans-grey);
+  }
+  .login .line {
+    opacity: 0;
+  }
+}

@@ -19,7 +19,7 @@
             rel="stylesheet"
             href="<core:url value="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"/>"
             />
-        <link rel="stylesheet" href="<core:url value="https://cdn.discordapp.com/attachments/950541467254943795/950541501925052446/prototype.css"/>" />
+        <link rel="stylesheet" href="<core:url value="https://cdn.discordapp.com/attachments/950541467254943795/950800753096798218/prototype.css"/>" />
         
         
         <deco:head />
